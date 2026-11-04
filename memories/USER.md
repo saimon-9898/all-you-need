@@ -1,0 +1,1 @@
+User prefers all coding work to be done via the opencode CLI rather than other coding agents.

@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "installed": {
+    "gif-search": {
+      "source": "official",
+      "identifier": "official/media/gif-search",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:c52e93aa81099829",
+      "install_path": "media/gif-search",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-11-01T12:01:13.220806+00:00",
+      "updated_at": "2026-11-01T12:01:13.220806+00:00"
+    },
+    "songsee": {
+      "source": "official",
+      "identifier": "official/media/songsee",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:2cb6f1b3d64e8141",
+      "install_path": "media/songsee",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-11-01T12:01:13.298897+00:00",
+      "updated_at": "2026-11-01T12:01:13.298897+00:00"
+    },
+    "llama-cpp": {
+      "source": "official",
+      "identifier": "official/mlops/inference/llama-cpp",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:43a4ec8fb07acce8",
+      "install_path": "mlops/inference/llama-cpp",
+      "files": [
+        "SKILL.md",
+        "references/advanced-usage.md",
+        "references/hub-discovery.md",
+        "references/optimization.md",
+        "references/quantization.md",
+        "references/server.md",
+        "references/troubleshooting.md"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-11-01T12:01:13.351391+00:00",
+      "updated_at": "2026-11-01T12:01:13.351391+00:00"
+    }
+  }
+}
