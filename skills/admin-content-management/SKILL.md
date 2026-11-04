@@ -39,7 +39,8 @@ The payload holds all text, links, media URLs, lists, and component-specific fie
 3. Service:
    - list published sections ordered by `position`
    - get by key
-   - upsert by key
+   - upsert by key (update only fields present in the request; use `array_key_exists`, not `??`, so `null` clears a value instead of preserving the old one — especially for `media_url`/`media_type`/`payload`)
+
    - delete
    - upload media to the public disk and return a URL
 4. Controller:
@@ -83,6 +84,7 @@ The payload holds all text, links, media URLs, lists, and component-specific fie
 - Commit/push only after the admin page renders the new sections in a real browser; a `curl` 200 on the API is not enough.
 - When a section's background image is rendered by a child element, give that child explicit dimensions or absolute positioning; a parent `aspect-ratio` does not propagate height to the child, leaving an empty box.
 - Admin upload sets `mediaUrl` only; the operator must also set `mediaType` (e.g. `video` or `video/mp4`) or the storefront renders the media as an image.
+- When an admin can clear a media URL, the backend upsert must distinguish "field omitted" from "field set to null"; `??` silently preserves the old value and makes removal impossible. Use `array_key_exists`.
 - `toMinor()` (or any currency-minor conversion) is for money fields only. Never apply it to integer counts such as `low_stock_threshold`, stock, or position; store and send those as raw integers or they are multiplied by 100.
 - Never expose secrets or credentials in admin UI, logs, or skill files.
 - For this user, perform coding changes via the opencode CLI.

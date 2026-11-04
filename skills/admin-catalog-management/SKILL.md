@@ -35,7 +35,7 @@ A product owns many variants. A variant is identified by size + colour, not by S
 2. Keep client Zod schemas in sync with backend field names and nullability.
 3. Update all three repository layers together: interface, HTTP, and mock.
 4. For size pills, allow long labels: auto width with a minimum, wrapping text, and padding. Fixed widths clip values such as `8(12cm | 06-12M)`.
-5. To add several sizes at once, split the size input on commas/newlines and create one variant per size. Generate a per-size SKU when more than one size is entered.
+5. To add several sizes at once, use an "Add size" button that reveals another size input row; create one variant per entered size. Generate a per-size SKU (e.g. `baseSku-size`) when more than one size is entered, and reuse the base SKU for a single size.
 6. Apply the same currency-minor conversion only to money fields (`unit_price_minor`, `compare_at_minor`); counts stay raw integers.
 7. Typecheck, lint, build with `NUXT_PUBLIC_DATA_SOURCE=http`, then restart Nitro after killing stale processes.
 
